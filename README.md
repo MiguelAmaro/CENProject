@@ -2,6 +2,16 @@
 
 
 # Api Lists
+
+Currently Using: **coinpaprika.com**
+
+
+# Usefull links
+[Streamlit Api Reference](https://docs.streamlit.io/library/api-reference)
+[Python .get() Reference](https://www.w3schools.com/python/ref_requests_get.asp)
+[Coinpaprica Reference](https://api.coinpaprika.com/)
+
+
 [Github Links](https://github.com/public-apis/public-apis)
 [Someother Site](https://rapidapi.com/collection/list-of-free-apis)
 
@@ -50,4 +60,5 @@ Tasks
 - [ ] Presenting the project:
   a. Present the project to the class, showcasing its features, functionality, and the API integration.
   b. Answer any questions from the professor or classmates, providing insights into the development process and lessons learned.
+
 
