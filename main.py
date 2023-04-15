@@ -13,7 +13,7 @@ def getJsonData(url):
         return jsonData
     else:
         st.error(res.reason)
-        return nil
+        return None
 
 def debugExtractedList(jsondata, extracted, dataframe):
     st.subheader("debug info")
@@ -25,15 +25,27 @@ def debugExtractedList(jsondata, extracted, dataframe):
     st.subheader("end debug info")
 
 
+
+
+
 # ENTRY POINT
 st.title("Cen Project")
 st.header("Crypto App")
 st.subheader("Json from api")
 
+coinJson = getJsonData("https://api.coinpaprika.com/v1/coins")
 deserializedJson = getJsonData("https://api.coinpaprika.com/v1/tickers")
 
+if coinJson is not None:
+    cointIds  = [ coinObj['id'] for coinObj in coinJson[:10]]
+    coinNames = [ coinObj['name'] for coinObj in coinJson[:10]]
 
-if deserializedJson != nil:
+    st.multiselect(
+        'What coins are you interested in',
+        coinNames,        
+        ['Bitcoin'])
+
+if deserializedJson is not None:
     # list comprehension
     #https://stackoverflow.com/questions/45655721/how-to-create-a-list-from-json-keyvalues-in-python3
     # NOTE this is slow but do i care
